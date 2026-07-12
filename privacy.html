@@ -57,7 +57,7 @@
   <li>Your run history, deviation notes, catalogue and lot numbers</li>
   <li>Photos you take of results</li>
   <li>Calendar entries, scheduled runs and reminders</li>
-  <li>Your API keys, if you supply your own, which are held in the operating system's encrypted keychain</li>
+  <li>Your API keys, if you supply your own, which are securely isolated in the operating system's encrypted keychain (iOS Keychain and Android Keystore services)</li>
 </ul>
 <p>If you delete the app, this data is deleted with it. You can also erase everything at any time using "Delete everything on this device" in Settings.</p>
 
@@ -68,13 +68,16 @@
 
 <p><strong>Using LabTempo credits.</strong> The protocol text is sent to the LabTempo service, which forwards it to the AI provider using our key, counts the credits used, and returns the result to your phone. We do not store the protocol text. It is held only in memory for the moment it takes to complete the request.</p>
 
-<h2>What the LabTempo service does store</h2>
-<p>If you use LabTempo credits, our server keeps two things:</p>
+<h2>Data collected by the LabTempo service</h2>
+<p>This section is written to map directly onto the App Store and Google Play data safety categories, so that what you read here matches what those stores are told.</p>
+<p>If you use LabTempo credits, our server records the following. If you use your own API key, our server records nothing at all, because your device never contacts it.</p>
 <ul>
-  <li><strong>An anonymous device identifier</strong> and the credit balance attached to it, so your credits follow you between sessions. This identifier is generated randomly on your device. It is not linked to your name, email address, Apple ID, or any other identity.</li>
-  <li><strong>A record of purchases</strong> (the store transaction identifier and how many credits it granted), so that a purchase cannot be redeemed twice.</li>
+  <li><strong>Device identifier.</strong> A randomly generated, anonymous device UUID, created on your phone and held in the keychain. It exists solely so a credit balance can follow you between sessions. It is not your hardware identifier, not an advertising identifier, and it is not linked to your name, email, Apple ID or any other identity. In store terminology this is a "Device or Other ID". It is not used for tracking or advertising.</li>
+  <li><strong>Credit balance.</strong> A number attached to that identifier.</li>
+  <li><strong>Purchase records.</strong> The store transaction identifier for each credit pack bought, and how many credits it granted, so that a purchase cannot be redeemed twice. This contains no payment details, which we never receive.</li>
+  <li><strong>Usage telemetry.</strong> For each parse, which AI model was used and how many tokens it consumed. This is used only to keep credit prices accurate. It contains no protocol text and nothing about you.</li>
 </ul>
-<p>We also record, for each parse, which AI model was used and how many tokens it consumed. This is used only to keep the credit prices accurate. It does not include the protocol text or anything about you.</p>
+<p><strong>We do not store the protocol text.</strong> It is held in memory only for the moment it takes to forward the request and return the result.</p>
 
 <h2>How the AI providers handle your protocols</h2>
 <p>This is the question researchers ask first, so here is the accurate answer rather than a reassuring one.</p>
@@ -90,11 +93,11 @@
 
 <p><strong>Unpublished work.</strong> We built this for bench scientists, and we know what an unpublished method is worth. That is exactly why the managed service runs on paid API accounts with no-training terms. If your protocol is confidential, that is the safest path we can offer short of not sending it anywhere at all.</p>
 
-<p>Their current terms are the source of truth, not this page:</p>
+<p>These are the commercial and developer terms, which are the ones that govern LabTempo's API accounts. They differ substantially from the same companies' consumer chat products, so these are the pages to read, not the consumer ones:</p>
 <ul>
-  <li><a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training">Anthropic: is my data used for model training?</a></li>
-  <li><a href="https://ai.google.dev/gemini-api/terms">Google: Gemini API Additional Terms of Service</a></li>
-  <li><a href="https://legal.mistral.ai/terms/privacy-policy">Mistral: Privacy Policy</a></li>
+  <li><a href="https://www.anthropic.com/legal/commercial-terms">Anthropic Commercial Terms of Service</a>. Section B states plainly: "Anthropic may not train models on Customer Content from Services." (Their <a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training">privacy centre</a> puts the same thing in plain English.)</li>
+  <li><a href="https://ai.google.dev/gemini-api/terms">Google Gemini API Additional Terms of Service</a>. For Paid Services, Google does not use prompts or responses to improve its products.</li>
+  <li><a href="https://legal.mistral.ai/terms/privacy-policy">Mistral Privacy Policy</a> and <a href="https://docs.mistral.ai/admin/monitor-comply/privacy-data-controls">privacy and data controls</a>. Data sent through the API is not used for model training.</li>
 </ul>
 
 <p><strong>If you bring your own key.</strong> The text goes straight from your phone to the provider you chose, and we never see it. But check which plan your key is on. Several providers treat free and paid tiers differently, and a free-tier key may permit training on your content. If that matters to you, use a paid key, or use LabTempo credits where we have already handled it.</p>
