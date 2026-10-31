@@ -74,12 +74,12 @@
 <ul>
   <li><strong>Device ID.</strong> A random identifier made on your phone the first time you use credits. It is not linked to your name, email address or Apple ID. You can see it in Settings.</li>
   <li><strong>Credit balance</strong>, and when it last changed.</li>
-  <li><strong>Purchases.</strong> For each credit pack: the App Store transaction ID, your device ID, the number of credits granted, and the time. This is how a purchase is redeemed exactly once.</li>
+  <li><strong>Purchases.</strong> For each credit pack: the App Store transaction ID, your device ID, the number of credits granted, the time, and whether Apple has refunded it. This is how a purchase is redeemed exactly once.</li>
   <li><strong>Usage totals.</strong> For each parse: the model, the number of tokens in and out, the credits charged, and the time. These records do not contain your device ID or any of your content.</li>
   <li><strong>Failed parses today.</strong> How many unusable replies your device ID has had today, so refunds can be limited. Earlier days are deleted.</li>
 </ul>
 <h2>Purchases</h2>
-<p>Apple processes all payments. We never see your payment details or your Apple ID. When you buy credits, the app sends us the transaction ID and Apple's signed transaction record. We check it with Apple's App Store Server API before adding credits.</p>
+<p>Apple processes all payments. We never see your payment details or your Apple ID. When you buy credits, the app sends us the transaction ID and Apple's signed transaction record. We check it with Apple's App Store Server API before adding credits. If Apple refunds a purchase, Apple tells our service, which checks with Apple and removes that pack's credits. If they were already used, your balance goes below zero until your next purchase.</p>
 <h2>Other services the app contacts</h2>
 <p>These are contacted only when you use the feature.</p>
 <ul>
@@ -96,7 +96,7 @@
 <h2>Where data goes</h2>
 <p>Cloudflare, Anthropic, Google and OpenAI are based in the United States. Mistral is based in France. DeepSeek is based in China, and is only used if you add your own DeepSeek key. Where our service sends data outside the EU, it relies on the safeguards these companies provide.</p>
 <h2>Legal basis</h2>
-<p>We process your device ID, balance and purchase records to provide the credits you bought (performance of a contract, GDPR Article 6(1)(b)). We keep purchase records to stop a purchase being redeemed twice, and count failed parses to stop refunds being abused (legitimate interest, Article 6(1)(f)).</p>
+<p>We process your device ID, balance and purchase records to provide the credits you bought (performance of a contract, GDPR Article 6(1)(b)). We keep purchase records to stop a purchase being redeemed twice or kept after a refund, and count failed parses to stop refunds being abused (legitimate interest, Article 6(1)(f)).</p>
 <h2>How long we keep it</h2>
 <p>Your device ID and balance are kept while you can still use your credits. Purchase records are kept for as long as the purchase could be redeemed again. The count of failed parses is kept for the current day only. You can ask us to delete them at any time. Deleting them also deletes your remaining credits.</p>
 <h2>Your rights</h2>
