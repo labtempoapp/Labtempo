@@ -42,98 +42,70 @@
 <body>
 
 <h1>LabTempo Privacy Policy</h1>
-<p class="updated">Last updated: 12 July 2026</p>
-
-<p>LabTempo turns laboratory protocols into timed, runnable steps. This policy explains exactly what happens to your data. The short version: your work stays on your phone, and there is no account.</p>
-
-<div class="box">
-  <strong>In plain terms.</strong> Your protocols, run records, photos and notes are stored on your device. They are not uploaded to us. We have no account system, so we cannot see your work. The only time protocol text leaves your phone is when you ask the app to parse it with AI. <strong>When that happens through LabTempo credits, it is not used to train any AI model</strong>, because we run on paid commercial API accounts where the providers commit not to train on content. The detail is below.
-</div>
-
-<h2>What stays on your device</h2>
-<p>All of the following is stored locally on your phone and never sent to us:</p>
+<p class="updated">Effective date: 30 October 2026</p>
+<p>Contact: <a href="mailto:labtempo@protonmail.com">labtempo@protonmail.com</a>.</p>
+<h2>The short version</h2>
 <ul>
-  <li>Your protocols, including every step, reagent, buffer and timing</li>
-  <li>Your run history, deviation notes, catalogue and lot numbers</li>
-  <li>Photos you take of results</li>
-  <li>Calendar entries, scheduled runs and reminders</li>
-  <li>Your API keys, if you supply your own, which are securely isolated in the operating system's encrypted keychain (iOS Keychain and Android Keystore services)</li>
+  <li>There is no account and no sign in.</li>
+  <li>Your protocols, runs, photos, cell lines and everything else you record stay on your phone.</li>
+  <li>If you buy credits, our service stores a random device ID, your credit balance and your purchase records. It does not store your protocols.</li>
+  <li>A protocol you choose to parse is sent to an AI provider. With your own API key it goes straight there. With credits it passes through our service, which forwards it and keeps nothing.</li>
+  <li>No analytics, no tracking, no advertising. We do not sell or share your data.</li>
 </ul>
-<p>If you delete the app, this data is deleted with it. You can also erase everything at any time using "Delete everything on this device" in Settings.</p>
-
-<h2>The one exception: AI parsing</h2>
-<p>To convert a written protocol into steps, its text must be sent to an AI model. There are two ways this can happen, and you choose which.</p>
-
-<p><strong>Using your own API key.</strong> The protocol text is sent directly from your phone to the AI provider you selected (such as Anthropic, Google, Mistral, OpenAI or DeepSeek). It does not pass through us. Your relationship is with that provider, under their terms and privacy policy. We never see the text and never see your key.</p>
-
-<p><strong>Using LabTempo credits.</strong> The protocol text is sent to the LabTempo service, which forwards it to the AI provider using our key, counts the credits used, and returns the result to your phone. We do not store the protocol text. It is held only in memory for the moment it takes to complete the request.</p>
-
-<h2>Data collected by the LabTempo service</h2>
-<p>This section is written to map directly onto the App Store and Google Play data safety categories, so that what you read here matches what those stores are told.</p>
-<p>If you use LabTempo credits, our server records the following. If you use your own API key, our server records nothing at all, because your device never contacts it.</p>
+<h2>Data stored only on your phone</h2>
+<p>LabTempo saves the following in the app's own storage on your phone. None of it is sent to us.</p>
 <ul>
-  <li><strong>Device identifier.</strong> A randomly generated, anonymous device UUID, created on your phone and held in the keychain. It exists solely so a credit balance can follow you between sessions. It is not your hardware identifier, not an advertising identifier, and it is not linked to your name, email, Apple ID or any other identity. In store terminology this is a "Device or Other ID". It is not used for tracking or advertising.</li>
-  <li><strong>Credit balance.</strong> A number attached to that identifier.</li>
-  <li><strong>Purchase records.</strong> The store transaction identifier for each credit pack bought, and how many credits it granted, so that a purchase cannot be redeemed twice. This contains no payment details, which we never receive.</li>
-  <li><strong>Usage telemetry.</strong> For each parse, which AI model was used and how many tokens it consumed. This is used only to keep credit prices accurate. It contains no protocol text and nothing about you.</li>
+  <li>Protocols, folders and recipes.</li>
+  <li>Runs and past runs: notes, logged changes, step times, ratings, catalogue and lot numbers, samples, gels and plates.</li>
+  <li>Photos you take or attach.</li>
+  <li>Cell lines and passage logs, storage boxes, primer pairs, projects, to-dos and calendar entries.</li>
+  <li>Your settings.</li>
 </ul>
-<p><strong>We do not store the protocol text.</strong> It is held in memory only for the moment it takes to forward the request and return the result.</p>
-
-<h2>How the AI providers handle your protocols</h2>
-<p>This is the question researchers ask first, so here is the accurate answer rather than a reassuring one.</p>
-
-<div class="box">
-  <strong>If you use LabTempo credits, your protocols are not used to train any AI model.</strong>
-  LabTempo pays for commercial API accounts with Anthropic, Google and Mistral. On these paid API accounts, all three providers commit in their terms that content is not used to train their models. That commitment is the reason this app runs on paid accounts rather than free tiers, where the terms are different and content often <em>is</em> used for training.
-</div>
-
-<p>Your protocol is sent, parsed, and returned. It is not added to a training set. It is not reviewed by us. It is not kept by us.</p>
-
-<p><strong>Retention.</strong> The providers do hold content briefly. Typically inputs and outputs are retained for around 30 days for abuse monitoring and legal compliance, then deleted. This is a safety measure on their side, not a training pipeline, and it is the honest limit of what we can promise. Nobody retains your protocols indefinitely.</p>
-
-<p><strong>Unpublished work.</strong> We built this for bench scientists, and we know what an unpublished method is worth. That is exactly why the managed service runs on paid API accounts with no-training terms. If your protocol is confidential, that is the safest path we can offer short of not sending it anywhere at all.</p>
-
-<p>These are the commercial and developer terms, which are the ones that govern LabTempo's API accounts. They differ substantially from the same companies' consumer chat products, so these are the pages to read, not the consumer ones:</p>
+<p>API keys and ELN tokens (eLabFTW, Notion) are stored in the iOS keychain. They are only sent to the service they belong to.</p>
+<p>&ldquo;Delete everything&rdquo; in Settings removes this data from your phone. Deleting the app does the same, except that iOS keeps keychain items, so your device ID (see below) survives a reinstall and your credits come back.</p>
+<p>Your phone's own backups (iCloud or a computer) include LabTempo's data according to your Apple settings. A backup file you export from LabTempo is yours. It goes wherever you send it.</p>
+<h2>AI parsing</h2>
+<p>AI is optional. Writing a protocol yourself, importing one and the tutorial work without it.</p>
+<p>When you paste text, attach a file or describe an experiment and ask LabTempo to turn it into steps, that content is sent to an AI model. There are two ways this happens.</p>
+<p><strong>With your own API key.</strong> The content goes directly from your phone to the provider you chose: Anthropic, Google, Mistral, OpenAI or DeepSeek. It does not pass through us. Your use is governed by your agreement with that provider.</p>
+<p><strong>With LabTempo credits.</strong> The content goes from your phone to our service, which forwards it to Anthropic, Google or Mistral and returns the result. Our service does not store or log the content. These providers process it under their commercial API terms. Under those terms they do not use API content to train models and they may keep it for a limited period to monitor abuse.</p>
+<h2>What our service stores</h2>
+<p>Our service runs on Cloudflare. It only stores data when you use credits.</p>
 <ul>
-  <li><a href="https://www.anthropic.com/legal/commercial-terms">Anthropic Commercial Terms of Service</a>. Section B states plainly: "Anthropic may not train models on Customer Content from Services." (Their <a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training">privacy centre</a> puts the same thing in plain English.)</li>
-  <li><a href="https://ai.google.dev/gemini-api/terms">Google Gemini API Additional Terms of Service</a>. For Paid Services, Google does not use prompts or responses to improve its products.</li>
-  <li><a href="https://legal.mistral.ai/terms/privacy-policy">Mistral Privacy Policy</a> and <a href="https://docs.mistral.ai/admin/monitor-comply/privacy-data-controls">privacy and data controls</a>. Data sent through the API is not used for model training.</li>
+  <li><strong>Device ID.</strong> A random identifier made on your phone the first time you use credits. It is not linked to your name, email address or Apple ID. You can see it in Settings.</li>
+  <li><strong>Credit balance</strong>, and when it last changed.</li>
+  <li><strong>Purchases.</strong> For each credit pack: the App Store transaction ID, your device ID, the number of credits granted, and the time. This is how a purchase is redeemed exactly once.</li>
+  <li><strong>Usage totals.</strong> For each parse: the model, the number of tokens in and out, the credits charged, and the time. These records do not contain your device ID or any of your content.</li>
 </ul>
-
-<p><strong>If you bring your own key.</strong> The text goes straight from your phone to the provider you chose, and we never see it. But check which plan your key is on. Several providers treat free and paid tiers differently, and a free-tier key may permit training on your content. If that matters to you, use a paid key, or use LabTempo credits where we have already handled it.</p>
-
-<div class="box">
-  <strong>A word of judgement.</strong> The no-training commitments above are made by those companies, not by us, and terms change. If you are working with genuinely sensitive material, read their current terms and decide for yourself. We would rather you make an informed choice than take our word for it.
-</div>
-
-<h2>What we do not do</h2>
+<h2>Purchases</h2>
+<p>Apple processes all payments. We never see your payment details or your Apple ID. When you buy credits, the app sends us the transaction ID and Apple's signed transaction record. We check it with Apple's App Store Server API before adding credits.</p>
+<h2>Other services the app contacts</h2>
+<p>These are contacted only when you use the feature.</p>
 <ul>
-  <li>We do not have accounts, logins or passwords</li>
-  <li>We do not collect your name, email or contact details</li>
-  <li>We do not use analytics or tracking of any kind</li>
-  <li>We do not serve advertising</li>
-  <li>We do not sell or share data with anyone</li>
-  <li>We do not store your protocol text</li>
+  <li><strong>Paper search.</strong> Your search terms and article identifiers go to Europe PMC, run by EMBL-EBI. To look for a free copy of a paper, its DOI goes to Unpaywall.</li>
+  <li><strong>Links.</strong> When you paste a link (a recipe or kit page) or open a link from a QR code, the app fetches or opens that page directly. That website sees your IP address, as with any browser.</li>
+  <li><strong>ELN export.</strong> When you send a run to eLabFTW or Notion, it goes to that service with your token. Sending to Overleaf opens a new Overleaf project containing your methods text.</li>
 </ul>
-
-<h2>Payments</h2>
-<p>Credit packs are purchased through Apple's App Store or Google Play. Those companies handle the payment and receive your payment details. We never see your card details. We receive only a confirmation that a purchase was made, which we use to add credits to your device identifier.</p>
-
+<h2>Camera, photos and notifications</h2>
+<ul>
+  <li>The camera is used to take photos you choose to keep and to read QR codes. QR codes are read on the phone. Camera frames are not saved.</li>
+  <li>Photos you take or attach are copied into the app's storage. They are included in exports you make.</li>
+  <li>Timer, reminder and culture notifications, and Lock Screen timers, are created on your phone. They are not sent from a server.</li>
+</ul>
+<h2>Where data goes</h2>
+<p>Cloudflare, Anthropic, Google and OpenAI are based in the United States. Mistral is based in France. DeepSeek is based in China, and is only used if you add your own DeepSeek key. Where our service sends data outside the EU, it relies on the safeguards these companies provide.</p>
+<h2>Legal basis</h2>
+<p>We process your device ID, balance and purchase records to provide the credits you bought (performance of a contract, GDPR Article 6(1)(b)). We keep purchase records to stop a purchase being redeemed twice (legitimate interest, Article 6(1)(f)).</p>
+<h2>How long we keep it</h2>
+<p>Your device ID and balance are kept while you can still use your credits. Purchase records are kept for as long as the purchase could be redeemed again. You can ask us to delete them at any time. Deleting them also deletes your remaining credits.</p>
+<h2>Your rights</h2>
+<p>You can ask for a copy of the data we hold about your device ID, or ask us to correct or delete it. Email <a href="mailto:labtempo@protonmail.com">labtempo@protonmail.com</a> with the device ID shown in Settings. We have no other way to link the data to you.</p>
 <h2>Children</h2>
-<p>LabTempo is intended for researchers, students and professionals working in laboratories. It is not directed at children under 13, and we do not knowingly collect information from them.</p>
-
-<h2>Your control</h2>
-<p>Because we hold no personal data about you, there is nothing personal to request or correct. You can remove everything held on your device at any time through Settings. If you wish to have the anonymous credit record associated with your device identifier deleted, contact us at the address below and include the identifier, which is shown in Settings.</p>
-
+<p>LabTempo is made for laboratory researchers and is not directed at children.</p>
 <h2>Changes</h2>
-<p>If this policy changes in a way that materially affects you, the updated version will be posted here with a new date.</p>
-
+<p>If this policy changes, the new version will be posted here with a new effective date.</p>
 <h2>Contact</h2>
-<p>Questions about privacy, or anything else: <a href="mailto:labtempo@protonmail.com">labtempo@protonmail.com</a></p>
-
-<footer>
-  LabTempo &middot; Your research companion
-</footer>
+<p><a href="mailto:labtempo@protonmail.com">labtempo@protonmail.com</a></p>
 
 </body>
 </html>
