@@ -48,7 +48,7 @@
 <ul>
   <li>There is no account and no sign in.</li>
   <li>Your protocols, runs, photos, cell lines and everything else you record stay on your phone.</li>
-  <li>If you buy credits, our service stores a random device ID, your credit balance, your purchase records and a count of today's failed parses. It does not store your protocols.</li>
+  <li>If you use credits, our service stores a random device ID, your credit balance, your purchase records and a count of today's failed parses. It does not store your protocols.</li>
   <li>A protocol you choose to parse is sent to an AI provider. With your own API key it goes straight there. With credits it passes through our service, which forwards it and keeps nothing.</li>
   <li>No analytics, no tracking, no advertising. We do not sell or share your data.</li>
 </ul>
@@ -69,6 +69,7 @@
 <p>When you paste text, attach a file or describe an experiment and ask LabTempo to turn it into steps, that content is sent to an AI model. There are two ways this happens.</p>
 <p><strong>With your own API key.</strong> The content goes directly from your phone to the provider you chose: Anthropic, Google, Mistral, OpenAI or DeepSeek. It does not pass through us. Your use is governed by your agreement with that provider.</p>
 <p><strong>With LabTempo credits.</strong> The content goes from your phone to our service, which forwards it to Anthropic, Google or Mistral and returns the result. Our service does not store or log the content. These providers process it under their commercial API terms. Under those terms they do not use API content to train models and they may keep it for a limited period to monitor abuse.</p>
+<p><strong>Allergies.</strong> If you set allergies, they are stored on your phone and sent with your cooking requests, so the AI can avoid them. We do not store them. Only the allergen names are sent. As with any request, the AI provider may keep it for a limited period to monitor abuse.</p>
 <h2>What our service stores</h2>
 <p>Our service runs on Cloudflare. It only stores data when you use credits.</p>
 <ul>
@@ -80,7 +81,7 @@
   <li><strong>Failed parses today.</strong> How many unusable replies your device ID has had today, so refunds can be limited. Earlier days are deleted.</li>
 </ul>
 <h2>Purchases</h2>
-<p>Apple processes all payments. We never see your payment details or your Apple ID. When you buy credits, the app sends us the transaction ID and Apple's signed transaction record. We check it with Apple's App Store Server API before adding credits. If Apple refunds a purchase, Apple tells our service, which checks with Apple and removes that pack's credits. If they were already used, your balance goes below zero until your next purchase.</p>
+<p>Apple processes all payments. We never see your payment details or your Apple ID. When you buy credits, the app sends us the transaction ID and Apple's signed transaction record. We check it with Apple's App Store Server API before adding credits. If Apple refunds a purchase, Apple tells our service, which checks with Apple and removes that pack's credits. If they were already used, your balance goes below zero until your next purchase. Tips are processed by Apple. Nothing about a tip is sent to our service.</p>
 <h2>Other services the app contacts</h2>
 <p>These are contacted only when you use the feature.</p>
 <ul>
@@ -97,7 +98,7 @@
 <h2>Where data goes</h2>
 <p>Cloudflare, Anthropic, Google and OpenAI are based in the United States. Mistral is based in France. DeepSeek is based in China, and is only used if you add your own DeepSeek key. Where our service sends data outside the EU, it relies on the safeguards these companies provide.</p>
 <h2>Legal basis</h2>
-<p>We process your device ID, balance and purchase records to provide the credits you bought (performance of a contract, GDPR Article 6(1)(b)). We keep purchase records to stop a purchase being redeemed twice or kept after a refund, and count failed parses to stop refunds being abused (legitimate interest, Article 6(1)(f)).</p>
+<p>We process your device ID, balance and purchase records to provide the credits you bought (performance of a contract, GDPR Article 6(1)(b)). We keep purchase records to stop a purchase being redeemed twice or kept after a refund, and count failed parses to stop refunds being abused (legitimate interest, Article 6(1)(f)). Allergies are health information. They are sent only if you set them, and you can remove them in Settings at any time (your explicit consent, Article 9(2)(a)).</p>
 <h2>How long we keep it</h2>
 <p>Your device ID and balance are kept while you can still use your credits. Purchase records are kept for as long as the purchase could be redeemed again. The count of failed parses is kept for the current day only. A record of moving credits is deleted 30 days after its code expires. You can ask us to delete them at any time. Deleting them also deletes your remaining credits.</p>
 <h2>Your rights</h2>
